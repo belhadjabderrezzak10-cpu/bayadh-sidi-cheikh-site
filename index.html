@@ -1,148 +1,65 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="بوابة الأبيض سيدي الشيخ - منصة إخبارية محلية">
 <title>بوابة الأبيض سيدي الشيخ | أخبار المنطقة</title>
 <style>
-:root{--green:#123b32;--green2:#1d5948;--gold:#d6b66d;--ink:#18231f;--muted:#68756f;--paper:#f5f6f3;--line:#e4e9e5;--white:#fff}
-*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.7}
-a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}
-.container{width:min(1160px,92%);margin:auto}
-.topline{background:#0c2b25;color:#dce8e2;font-size:13px;padding:7px 0}
-.topline .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-header{background:var(--green);color:white;box-shadow:0 5px 20px #102d241a}
-.head{display:flex;align-items:center;gap:16px;padding:20px 0}
-.logo{width:58px;height:58px;border-radius:16px;background:var(--gold);color:var(--green);display:grid;place-items:center;font-size:27px;font-weight:bold}
-.brand{flex:1}.brand h1{font-size:23px;margin:0;line-height:1.35}.brand p{margin:3px 0 0;color:#d0dfd7;font-size:12px}
-.admin-btn{border:1px solid #ffffff55;background:#ffffff12;color:white;border-radius:10px;padding:9px 14px;cursor:pointer}
-nav{border-top:1px solid #ffffff20}.navinner{display:flex;gap:5px;overflow:auto;white-space:nowrap}.navinner a{padding:12px 15px;color:#f2f5f2;font-size:14px}.navinner a:hover,.navinner a.active{background:#ffffff16;color:var(--gold)}
+:root{--green:#123b32;--green2:#1d5948;--gold:#d6b66d;--ink:#18231f;--muted:#68756f;--paper:#f5f6f3;--line:#e4e9e5}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.7}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}
+.container{width:min(1160px,92%);margin:auto}.topline{background:#0c2b25;color:#dce8e2;font-size:13px;padding:7px 0}.topline .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+header{background:var(--green);color:white;box-shadow:0 5px 20px #102d241a}.head{display:flex;align-items:center;gap:16px;padding:20px 0}.logo{width:58px;height:58px;border-radius:16px;background:var(--gold);color:var(--green);display:grid;place-items:center;font-size:27px;font-weight:bold}.brand{flex:1}.brand h1{font-size:23px;margin:0;line-height:1.35}.brand p{margin:3px 0 0;color:#d0dfd7;font-size:12px}
+.admin-btn{border:1px solid #ffffff55;background:#ffffff12;color:white;border-radius:10px;padding:9px 14px;cursor:pointer}nav{border-top:1px solid #ffffff20}.navinner{display:flex;gap:5px;overflow:auto;white-space:nowrap}.navinner a{padding:12px 15px;color:#f2f5f2;font-size:14px}.navinner a:hover,.navinner a.active{background:#ffffff16;color:var(--gold)}
 .ticker{background:#fff;border-bottom:1px solid var(--line)}.ticker .container{display:flex;align-items:center;gap:14px;padding:10px 0}.breaking{background:#b93832;color:white;font-size:12px;font-weight:bold;padding:4px 10px;border-radius:5px;white-space:nowrap}.tickertext{font-size:13px;color:#46534d}
-main{padding:26px 0 55px}
-.section-title{display:flex;align-items:center;justify-content:space-between;margin:28px 0 15px}.section-title h2{font-size:20px;margin:0;border-right:4px solid var(--gold);padding-right:11px}.section-title span{color:var(--muted);font-size:12px}
-.hero{display:grid;grid-template-columns:1.55fr 1fr;gap:18px}
-.feature{position:relative;min-height:365px;border-radius:18px;overflow:hidden;background:linear-gradient(135deg,#234f42,#0b2823);color:white;display:flex;align-items:end}
-.feature img{position:absolute;width:100%;height:100%;object-fit:cover;inset:0;opacity:.58}
-.feature:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#071b17e8,transparent 75%)}
-.feature-content{position:relative;z-index:1;padding:26px;max-width:680px}.tag{display:inline-block;background:var(--gold);color:#18392f;border-radius:5px;padding:3px 9px;font-size:11px;font-weight:bold}
-.feature h2{font-size:clamp(22px,3vw,34px);line-height:1.45;margin:10px 0}.meta{font-size:12px;color:#d3ddd8}
+main{padding:26px 0 55px}.section-title{display:flex;align-items:center;justify-content:space-between;margin:28px 0 15px}.section-title h2{font-size:20px;margin:0;border-right:4px solid var(--gold);padding-right:11px}.section-title span{color:var(--muted);font-size:12px}
+.hero{display:grid;grid-template-columns:1.55fr 1fr;gap:18px}.feature{position:relative;min-height:365px;border-radius:18px;overflow:hidden;background:linear-gradient(135deg,#234f42,#0b2823);color:white;display:flex;align-items:end}.feature img{position:absolute;width:100%;height:100%;object-fit:cover;inset:0;opacity:.58}.feature:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#071b17e8,transparent 75%)}
+.feature-content{position:relative;z-index:1;padding:26px;max-width:680px}.tag{display:inline-block;background:var(--gold);color:#18392f;border-radius:5px;padding:3px 9px;font-size:11px;font-weight:bold}.feature h2{font-size:clamp(22px,3vw,34px);line-height:1.45;margin:10px 0}.meta{font-size:12px;color:#d3ddd8}
 .sidefeatures{display:grid;gap:14px}.small-feature{display:flex;background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden;min-height:110px}.small-feature img{width:38%;object-fit:cover}.small-feature div{padding:12px}.small-feature h3{font-size:14px;line-height:1.5;margin:6px 0}.small-feature .meta{color:var(--muted)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:0 10px 28px #142f2410}.card img{width:100%;height:175px;object-fit:cover;background:#dfe7e1}.cardbody{padding:15px}.card h3{font-size:16px;line-height:1.5;margin:7px 0}.card p{font-size:13px;color:var(--muted);margin:7px 0}.card .meta{color:var(--muted)}
-.cat{font-size:11px;color:var(--green2);font-weight:bold}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:0 10px 28px #142f2410}.card img{width:100%;height:175px;object-fit:cover;background:#dfe7e1}.cardbody{padding:15px}.card h3{font-size:16px;line-height:1.5;margin:7px 0}.card p{font-size:13px;color:var(--muted);margin:7px 0}.card .meta{color:var(--muted)}.cat{font-size:11px;color:var(--green2);font-weight:bold}
 .empty{background:white;border:1px dashed #cbd6ce;border-radius:14px;padding:28px;text-align:center;color:var(--muted);grid-column:1/-1}
 footer{background:#0c2b25;color:#d7e3dc;padding:30px 0}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot strong{color:var(--gold)}.foot p{font-size:12px;margin:5px 0;color:#b8c9c0}
-.overlay{position:fixed;inset:0;background:#071b17a8;display:none;align-items:center;justify-content:center;padding:16px;z-index:10}.overlay.show{display:flex}.modal{background:white;border-radius:16px;padding:22px;width:min(620px,100%);max-height:90vh;overflow:auto}.modal h2{margin:0 0 15px}.field{display:grid;gap:6px;margin:12px 0}.field label{font-size:13px;font-weight:bold}.field input,.field textarea,.field select{border:1px solid #d5ded8;border-radius:9px;padding:10px;background:#fbfcfb;width:100%}.field textarea{min-height:100px;resize:vertical}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.primary{background:var(--green);color:white;border:0;border-radius:9px;padding:10px 17px;cursor:pointer}.secondary{background:#edf2ee;color:var(--green);border:0;border-radius:9px;padding:10px 17px;cursor:pointer}.danger{background:#a93630;color:white;border:0;border-radius:9px;padding:8px 12px;cursor:pointer}.hint{font-size:12px;color:var(--muted)}
-.article-view{display:none;background:white;border:1px solid var(--line);border-radius:16px;padding:24px;margin-top:20px}.article-view img{width:100%;max-height:430px;object-fit:cover;border-radius:12px}.article-view h1{font-size:28px;line-height:1.5}.article-view p{line-height:2}
-.search{border:1px solid #ffffff55;background:#ffffff12;color:white;border-radius:9px;padding:8px 11px;width:170px}.search::placeholder{color:#d7e2dc}
+.overlay{position:fixed;inset:0;background:#071b17a8;display:none;align-items:center;justify-content:center;padding:16px;z-index:10}.overlay.show{display:flex}.modal{background:white;border-radius:16px;padding:22px;width:min(620px,100%);max-height:90vh;overflow:auto}.modal h2{margin:0 0 15px}.field{display:grid;gap:6px;margin:12px 0}.field label{font-size:13px;font-weight:bold}.field input,.field textarea,.field select{border:1px solid #d5ded8;border-radius:9px;padding:10px;background:#fbfcfb;width:100%}.field textarea{min-height:100px;resize:vertical}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.primary{background:var(--green);color:white;border:0;border-radius:9px;padding:10px 17px;cursor:pointer}.secondary{background:#edf2ee;color:var(--green);border:0;border-radius:9px;padding:10px 17px;cursor:pointer}.danger{background:#a93630;color:white;border:0;border-radius:9px;padding:8px 12px;cursor:pointer}.hint{font-size:12px;color:var(--muted)}.status{font-size:12px;margin:10px 0;padding:9px 11px;border-radius:8px;background:#f1f5f1;color:#365247}.status.error{background:#fff0ef;color:#9a302b}
+.article-view{display:none;background:white;border:1px solid var(--line);border-radius:16px;padding:24px;margin-top:20px}.article-view img{width:100%;max-height:430px;object-fit:cover;border-radius:12px}.article-view h1{font-size:28px;line-height:1.5}.article-view p{line-height:2}.search{border:1px solid #ffffff55;background:#ffffff12;color:white;border-radius:9px;padding:8px 11px;width:170px}.search::placeholder{color:#d7e2dc}
 @media(max-width:800px){.hero{grid-template-columns:1fr}.feature{min-height:300px}.sidefeatures{grid-template-columns:1fr 1fr}.cards{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:540px){.head{gap:10px;padding:14px 0}.logo{width:48px;height:48px}.brand h1{font-size:17px}.brand p{font-size:10px}.admin-btn{font-size:12px;padding:8px}.search{width:100px}.sidefeatures{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.card img{height:195px}.feature{min-height:290px}.feature-content{padding:19px}.feature h2{font-size:23px}.ticker .container{align-items:flex-start}.article-view{padding:16px}.article-view h1{font-size:22px}}
 </style>
 </head>
 <body>
 <div class="topline"><div class="container"><span id="today">بوابة الأبيض سيدي الشيخ</span><span>منبر إعلامي محلي • عين على الحدث ونبض المجتمع</span></div></div>
-<header>
- <div class="container head">
-  <div class="logo">ب</div>
-  <div class="brand"><h1>بوابة الأبيض سيدي الشيخ</h1><p>أخبار المنطقة بمصداقية واهتمام</p></div>
-  <input class="search" id="search" placeholder="ابحث في الأخبار..." aria-label="بحث">
-  <button class="admin-btn" onclick="openLogin()">إدارة الموقع</button>
- </div>
- <nav><div class="container navinner" id="nav">
-  <a href="#" class="active" data-cat="الكل">الرئيسية</a><a href="#" data-cat="أخبار المدينة">أخبار المدينة</a><a href="#" data-cat="ولاية البيض">ولاية البيض</a><a href="#" data-cat="المجتمع">المجتمع</a><a href="#" data-cat="التنمية">التنمية</a><a href="#" data-cat="الرياضة">الرياضة</a><a href="#" data-cat="الثقافة">الثقافة والتراث</a>
- </div></nav>
-</header>
+<header><div class="container head"><div class="logo">ب</div><div class="brand"><h1>بوابة الأبيض سيدي الشيخ</h1><p>أخبار المنطقة بمصداقية واهتمام</p></div><input class="search" id="search" placeholder="ابحث في الأخبار..." aria-label="بحث"><button class="admin-btn" onclick="openLogin()">إدارة الموقع</button></div>
+<nav><div class="container navinner" id="nav"><a href="#" class="active" data-cat="الكل">الرئيسية</a><a href="#" data-cat="أخبار المدينة">أخبار المدينة</a><a href="#" data-cat="ولاية البيض">ولاية البيض</a><a href="#" data-cat="المجتمع">المجتمع</a><a href="#" data-cat="التنمية">التنمية</a><a href="#" data-cat="الرياضة">الرياضة</a><a href="#" data-cat="الثقافة">الثقافة والتراث</a></div></nav></header>
 <div class="ticker"><div class="container"><span class="breaking">عاجل</span><span class="tickertext" id="ticker">تابعوا آخر المستجدات والأخبار المحلية عبر بوابة الأبيض سيدي الشيخ</span></div></div>
-<main class="container">
- <section id="home">
-  <div class="hero" id="hero"></div>
-  <div class="section-title"><h2 id="listTitle">آخر الأخبار</h2><span id="count"></span></div>
-  <div class="cards" id="cards"></div>
- </section>
- <section class="article-view" id="article"></section>
-</main>
+<main class="container"><section id="home"><div class="hero" id="hero"></div><div class="section-title"><h2 id="listTitle">آخر الأخبار</h2><span id="count"></span></div><div class="cards" id="cards"><div class="empty">جارٍ تحميل الأخبار...</div></div></section><section class="article-view" id="article"></section></main>
 <footer><div class="container foot"><div><strong>بوابة الأبيض سيدي الشيخ</strong><p>منصة إخبارية محلية تهتم بأخبار المدينة والمنطقة.</p></div><div><strong>تواصل معنا</strong><p>البريد الإلكتروني: يضاف لاحقًا</p><p>صفحتنا على فيسبوك: يضاف الرابط لاحقًا</p></div><div><p>© <span id="year"></span> بوابة الأبيض سيدي الشيخ</p><p>جميع الحقوق محفوظة</p></div></div></footer>
-
-<div class="overlay" id="login"><div class="modal"><h2>دخول إدارة الموقع</h2><p class="hint">هذه نسخة تجريبية محلية. كلمة المرور الأولية: <b>admin123</b></p><div class="field"><label>كلمة المرور</label><input id="password" type="password" placeholder="أدخل كلمة المرور"></div><div class="actions"><button class="primary" onclick="login()">دخول</button><button class="secondary" onclick="closeModal('login')">إلغاء</button></div><p class="hint">غيّر كلمة المرور قبل نشر الموقع، ولا تستخدم هذه النسخة المحلية لإدارة أخبار حقيقية من عدة أجهزة.</p></div></div>
-<div class="overlay" id="dashboard"><div class="modal"><h2>لوحة إدارة الأخبار</h2><p class="hint">يمكنك إضافة خبر أو حذفه. البيانات محفوظة في هذا المتصفح فقط في هذه النسخة الأولية.</p>
- <div class="field"><label>عنوان الخبر</label><input id="newTitle" placeholder="اكتب عنوان الخبر"></div>
- <div class="field"><label>التصنيف</label><select id="newCat"><option>أخبار المدينة</option><option>ولاية البيض</option><option>المجتمع</option><option>التنمية</option><option>الرياضة</option><option>الثقافة</option></select></div>
- <div class="field"><label>رابط الصورة (اختياري)</label><input id="newImage" placeholder="https://..."></div>
- <div class="field"><label>ملخص الخبر</label><textarea id="newSummary" placeholder="ملخص قصير يظهر في الصفحة الرئيسية"></textarea></div>
- <div class="field"><label>نص الخبر</label><textarea id="newBody" placeholder="اكتب تفاصيل الخبر هنا"></textarea></div>
- <div class="actions"><button class="primary" onclick="addNews()">نشر الخبر</button><button class="secondary" onclick="closeModal('dashboard')">إغلاق</button></div>
- <hr><h3>الأخبار المنشورة</h3><div id="manageList"></div>
-</div></div>
+<div class="overlay" id="login"><div class="modal"><h2>دخول إدارة الموقع</h2><p class="hint">استخدمي حساب المدير المسجل في Supabase.</p><div class="field"><label>البريد الإلكتروني</label><input id="adminEmail" type="email" autocomplete="username" placeholder="البريد الإلكتروني"></div><div class="field"><label>كلمة المرور</label><input id="password" type="password" autocomplete="current-password" placeholder="كلمة مرور حساب Supabase"></div><div id="loginStatus" class="status" hidden></div><div class="actions"><button class="primary" onclick="login()">دخول</button><button class="secondary" onclick="closeModal('login')">إلغاء</button></div></div></div>
+<div class="overlay" id="dashboard"><div class="modal"><h2>لوحة إدارة الأخبار</h2><p class="hint">الأخبار المنشورة تُحفظ في قاعدة البيانات وتظهر للزوار.</p><div class="field"><label>عنوان الخبر</label><input id="newTitle" placeholder="اكتب عنوان الخبر"></div><div class="field"><label>التصنيف</label><select id="newCat"><option>أخبار المدينة</option><option>ولاية البيض</option><option>المجتمع</option><option>التنمية</option><option>الرياضة</option><option>الثقافة</option></select></div><div class="field"><label>رابط الصورة (اختياري)</label><input id="newImage" placeholder="https://..."></div><div class="field"><label>ملخص الخبر (اختياري)</label><textarea id="newSummary" placeholder="ملخص قصير للخبر"></textarea></div><div class="field"><label>نص الخبر</label><textarea id="newBody" placeholder="اكتب تفاصيل الخبر هنا"></textarea></div><div id="adminStatus" class="status" hidden></div><div class="actions"><button class="primary" onclick="addNews()">نشر الخبر</button><button class="secondary" onclick="loadNews(true)">تحديث الأخبار</button><button class="secondary" onclick="logout()">تسجيل الخروج</button><button class="secondary" onclick="closeModal('dashboard')">إغلاق</button></div><hr><h3>الأخبار المنشورة</h3><div id="manageList"></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const seed = [
-  {
-    id: 1,
-    title: "بوابة الأبيض سيدي الشيخ ترحب بكم",
-    cat: "أخبار المدينة",
-    summary: "فضاء إعلامي محلي لمتابعة أخبار الأبيض سيدي الشيخ وولاية البيض ونقل انشغالات المواطنين.",
-    body: "أهلاً بكم في بوابة الأبيض سيدي الشيخ. نسعى إلى تقديم أخبار المنطقة ومتابعة الشأن المحلي والمجتمعي والثقافي والرياضي، مع الحرص على الدقة والتحقق من المعلومات قبل نشرها.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
-    date: new Date().toLocaleDateString("ar-DZ")
-  },
-  {
-    id: 2,
-    title: "التنمية المحلية في صدارة اهتمامات المواطن",
-    cat: "التنمية",
-    summary: "متابعة المشاريع والخدمات العمومية وانشغالات السكان.",
-    body: "تولي بوابة الأبيض سيدي الشيخ اهتماماً خاصاً بمتابعة مشاريع التنمية المحلية والخدمات العمومية.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
-    date: new Date().toLocaleDateString("ar-DZ")
-  },
-  {
-    id: 3,
-    title: "التراث والثقافة ذاكرة المنطقة وهويتها",
-    cat: "الثقافة",
-    summary: "التعريف بالموروث الثقافي والعادات والتقاليد المحلية.",
-    body: "نسلط الضوء على الموروث الثقافي والتاريخي للمنطقة والمبادرات الثقافية والجمعوية.",
-    image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=80",
-    date: new Date().toLocaleDateString("ar-DZ")
-  },
-  {
-    id: 4,
-    title: "الرياضة المحلية مواهب تستحق المتابعة",
-    cat: "الرياضة",
-    summary: "تغطية النشاطات الرياضية والفرق والمواهب الشابة.",
-    body: "تخصص البوابة مساحة لمتابعة الرياضة المحلية والفرق والمواهب الشابة.",
-    image: "https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=900&q=80",
-    date: new Date().toLocaleDateString("ar-DZ")
-  }
-];
-.let news=JSON.parse(localStorage.getItem("bayadhNews")||"null");
-if(!Array.isArray(news)||news.length===0) news=seed;
-let active="الكل";
-const save=()=>localStorage.setItem("bayadhNews",JSON.stringify(news));
-const safe=s=>String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-function render(){
- const q=(document.getElementById("search").value||"").trim().toLowerCase();
- let list=news.filter(n=>(active==="الكل"||n.cat===active)&&(!q||(n.title+n.summary+n.cat).toLowerCase().includes(q)));
- document.getElementById("listTitle").textContent=active==="الكل"?"آخر الأخبار":active;
- document.getElementById("count").textContent=list.length+" خبر";
- const hero=document.getElementById("hero");
- if(active==="الكل"&&!q&&list.length){
-  let first=list[0], rest=list.slice(1,4);
-  hero.innerHTML=`<a class="feature" href="#" onclick="showArticle(${first.id});return false"><img src="${safe(first.image)}" onerror="this.style.display='none'"><div class="feature-content"><span class="tag">${safe(first.cat)}</span><h2>${safe(first.title)}</h2><div class="meta">${safe(first.date)} • بوابة الأبيض سيدي الشيخ</div></div></a><div class="sidefeatures">${rest.map(n=>`<a class="small-feature" href="#" onclick="showArticle(${n.id});return false"><img src="${safe(n.image)}" onerror="this.style.display='none'"><div><span class="cat">${safe(n.cat)}</span><h3>${safe(n.title)}</h3><div class="meta">${safe(n.date)}</div></div></a>`).join("")}</div>`;
- }else hero.innerHTML="";
- document.getElementById("cards").innerHTML=list.slice(active==="الكل"&&!q?4:0).map(card).join("")||'<div class="empty">لا توجد أخبار في هذا القسم حاليًا.</div>';
-}
-function card(n){return `<article class="card"><a href="#" onclick="showArticle(${n.id});return false"><img src="${safe(n.image)}" onerror="this.style.display='none'"><div class="cardbody"><span class="cat">${safe(n.cat)}</span><h3>${safe(n.title)}</h3><p>${safe(n.summary)}</p><div class="meta">${safe(n.date)} · اقرأ المزيد ←</div></div></a></article>`}
-function showArticle(id){let n=news.find(x=>x.id===id);if(!n)return;document.getElementById("home").style.display="none";let a=document.getElementById("article");a.style.display="block";a.innerHTML=`<button class="secondary" onclick="backHome()">→ العودة إلى الأخبار</button><p class="cat">${safe(n.cat)} • ${safe(n.date)}</p><h1>${safe(n.title)}</h1><img src="${safe(n.image)}" onerror="this.style.display='none'"><p><b>${safe(n.summary)}</b></p><p>${safe(n.body).replace(/\n/g,"<br>")}</p><button class="secondary" onclick="shareNews(${n.id})">مشاركة الخبر</button>`;window.scrollTo(0,0)}
-function backHome(){document.getElementById("article").style.display="none";document.getElementById("home").style.display="block";window.scrollTo(0,0)}
-function shareNews(id){let n=news.find(x=>x.id===id);if(n&&navigator.share)navigator.share({title:n.title,text:n.summary,url:location.href});else alert("يمكنك نسخ رابط الصفحة لمشاركة الخبر.");}
-function openLogin(){document.getElementById("login").classList.add("show")}
-function closeModal(id){document.getElementById(id).classList.remove("show")}
-function login(){if(document.getElementById("password").value==="admin123"){closeModal("login");document.getElementById("dashboard").classList.add("show");manage()}else alert("كلمة المرور غير صحيحة")}
-function addNews(){let title=document.getElementById("newTitle").value.trim(),summary=document.getElementById("newSummary").value.trim(),body=document.getElementById("newBody").value.trim();if(!title||!summary||!body){alert("يرجى إدخال العنوان والملخص ونص الخبر.");return}news.unshift({id:Date.now(),title,cat:document.getElementById("newCat").value,summary,body,image:document.getElementById("newImage").value.trim()||"https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=900&q=80",date:new Date().toLocaleDateString("ar-DZ")});save();["newTitle","newImage","newSummary","newBody"].forEach(id=>document.getElementById(id).value="");render();manage();alert("تمت إضافة الخبر في هذه النسخة المحلية.")}
-function manage(){document.getElementById("manageList").innerHTML=news.map(n=>`<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid #eee;padding:9px 0"><span style="font-size:13px">${safe(n.title)}</span><button class="danger" onclick="deleteNews(${n.id})">حذف</button></div>`).join("")}
-function deleteNews(id){if(confirm("هل تريد حذف هذا الخبر؟")){news=news.filter(n=>n.id!==id);save();render();manage()}}
+/* استبدلي قيمة المفتاح فقط بمفتاح Publishable الذي نسختِه. */
+const SUPABASE_URL = "https://kncnxjmlzxahzonggrnp.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_lGos0zdGZZkqQwmN35T3-A_Pcmd0UuX";
+const TABLE_NAME = "articles";
+let db=null, news=[], active="الكل", currentUser=null;
+const safe=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function status(id,msg,error=false){const e=document.getElementById(id);e.textContent=msg;e.hidden=!msg;e.classList.toggle("error",error);}
+function initDb(){if(!window.supabase)throw new Error("تعذر تحميل مكتبة Supabase. تحققي من الإنترنت.");if(SUPABASE_ANON_KEY.includes("PASTE_"))throw new Error("لم تتم إضافة Publishable key إلى الملف.");db=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);}
+function toArticle(r){return{id:r.id,title:r.title||"",cat:r.category||"أخبار المدينة",summary:r.summary||String(r.content||"").slice(0,180),body:r.content||"",image:r.image_url||"",date:r.created_at?new Date(r.created_at).toLocaleDateString("ar-DZ"):""};}
+async function loadNews(admin=false){try{if(!db)initDb();const {data,error}=await db.from(TABLE_NAME).select("id,title,content,category,image_url,is_published,created_at").eq("is_published",true).order("created_at",{ascending:false});if(error)throw error;news=(data||[]).map(toArticle);render();if(admin)status("adminStatus","تم تحديث الأخبار.");}catch(e){document.getElementById("cards").innerHTML='<div class="empty">تعذر تحميل الأخبار من قاعدة البيانات.</div>';if(admin)status("adminStatus",e.message||"حدث خطأ أثناء التحميل.",true);console.error(e);}}
+function render(){const q=document.getElementById("search").value.trim().toLowerCase();const list=news.filter(n=>(active==="الكل"||n.cat===active)&&(!q||(n.title+" "+n.summary+" "+n.cat+" "+n.body).toLowerCase().includes(q)));document.getElementById("listTitle").textContent=active==="الكل"?"آخر الأخبار":active;document.getElementById("count").textContent=list.length+" خبر";const hero=document.getElementById("hero");if(active==="الكل"&&!q&&list.length){const f=list[0],rest=list.slice(1,4);hero.innerHTML=`<a class="feature" href="#" onclick="showArticle('${safe(f.id)}');return false"><img src="${safe(f.image)}" onerror="this.style.display='none'"><div class="feature-content"><span class="tag">${safe(f.cat)}</span><h2>${safe(f.title)}</h2><div class="meta">${safe(f.date)} • بوابة الأبيض سيدي الشيخ</div></div></a><div class="sidefeatures">${rest.map(n=>`<a class="small-feature" href="#" onclick="showArticle('${safe(n.id)}');return false"><img src="${safe(n.image)}" onerror="this.style.display='none'"><div><span class="cat">${safe(n.cat)}</span><h3>${safe(n.title)}</h3><div class="meta">${safe(n.date)}</div></div></a>`).join("")}</div>`;}else hero.innerHTML="";document.getElementById("cards").innerHTML=list.slice(active==="الكل"&&!q?4:0).map(card).join("")||'<div class="empty">لا توجد أخبار منشورة في هذا القسم حاليًا.</div>';}
+function card(n){return`<article class="card"><a href="#" onclick="showArticle('${safe(n.id)}');return false">${n.image?`<img src="${safe(n.image)}" onerror="this.style.display='none'">`:""}<div class="cardbody"><span class="cat">${safe(n.cat)}</span><h3>${safe(n.title)}</h3><p>${safe(n.summary)}</p><div class="meta">${safe(n.date)} · اقرأ المزيد ←</div></div></a></article>`;}
+function showArticle(id){const n=news.find(x=>String(x.id)===String(id));if(!n)return;document.getElementById("home").style.display="none";const a=document.getElementById("article");a.style.display="block";a.innerHTML=`<button class="secondary" onclick="backHome()">العودة إلى الأخبار</button><p class="cat">${safe(n.cat)} • ${safe(n.date)}</p><h1>${safe(n.title)}</h1>${n.image?`<img src="${safe(n.image)}" onerror="this.style.display='none'">`:""}<p><b>${safe(n.summary)}</b></p><p>${safe(n.body).replace(/\n/g,"<br>")}</p><button class="secondary" onclick="shareNews('${safe(n.id)}')">مشاركة الخبر</button>`;window.scrollTo(0,0);}
+function backHome(){document.getElementById("article").style.display="none";document.getElementById("home").style.display="block";window.scrollTo(0,0);}
+function shareNews(id){const n=news.find(x=>String(x.id)===String(id));if(n&&navigator.share)navigator.share({title:n.title,text:n.summary,url:location.href});else alert("يمكنك نسخ رابط الصفحة لمشاركة الخبر.");}
+function openLogin(){status("loginStatus","");document.getElementById("login").classList.add("show");}
+function closeModal(id){document.getElementById(id).classList.remove("show");}
+async function login(){status("loginStatus","جارٍ تسجيل الدخول...");try{if(!db)initDb();const email=document.getElementById("adminEmail").value.trim(),password=document.getElementById("password").value;if(!email||!password){status("loginStatus","أدخلي البريد الإلكتروني وكلمة المرور.",true);return;}const {data,error}=await db.auth.signInWithPassword({email,password});if(error)throw error;currentUser=data.user;closeModal("login");document.getElementById("dashboard").classList.add("show");await manage();}catch(e){status("loginStatus",e.message||"تعذر تسجيل الدخول.",true);}}
+async function logout(){if(db)await db.auth.signOut();currentUser=null;closeModal("dashboard");}
+async function manage(){const box=document.getElementById("manageList");box.textContent="جارٍ تحميل القائمة...";try{const {data,error}=await db.from(TABLE_NAME).select("id,title,is_published").order("created_at",{ascending:false});if(error)throw error;box.innerHTML=(data||[]).map(n=>`<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid #eee;padding:9px 0"><span style="font-size:13px">${safe(n.title)}${n.is_published===false?" (مسودة)":""}</span><button class="danger" onclick="deleteNews('${safe(n.id)}')">حذف</button></div>`).join("")||'<p class="hint">لا توجد أخبار في الجدول.</p>';}catch(e){box.textContent="تعذر تحميل القائمة. قد تكون صلاحيات الجدول بحاجة إلى مراجعة.";status("adminStatus",e.message||"خطأ في قراءة الأخبار.",true);}}
+async function addNews(){status("adminStatus","جارٍ نشر الخبر...");const title=document.getElementById("newTitle").value.trim(),category=document.getElementById("newCat").value,image_url=document.getElementById("newImage").value.trim(),summary=document.getElementById("newSummary").value.trim(),content=document.getElementById("newBody").value.trim();if(!title||!content){status("adminStatus","يرجى إدخال عنوان الخبر ونصه.",true);return;}try{if(!currentUser)throw new Error("سجّلي الدخول إلى الإدارة أولًا.");const {error}=await db.from(TABLE_NAME).insert({title,category,content,image_url:image_url||null,is_published:true});if(error)throw error;document.getElementById("newTitle").value="";document.getElementById("newImage").value="";document.getElementById("newSummary").value="";document.getElementById("newBody").value="";await loadNews();await manage();status("adminStatus","تم نشر الخبر وحفظه في قاعدة البيانات.");}catch(e){status("adminStatus",e.message||"تعذر نشر الخبر. تحققي من سياسات الصلاحيات.",true);}}
+async function deleteNews(id){if(!confirm("هل تريدين حذف هذا الخبر نهائيًا؟"))return;try{if(!currentUser)throw new Error("سجّلي الدخول أولًا.");const {error}=await db.from(TABLE_NAME).delete().eq("id",id);if(error)throw error;await loadNews();await manage();status("adminStatus","تم حذف الخبر.");}catch(e){status("adminStatus",e.message||"تعذر حذف الخبر.",true);}}
 document.getElementById("search").addEventListener("input",render);
-document.getElementById("nav").addEventListener("click",e=>{let a=e.target.closest("a[data-cat]");if(!a)return;e.preventDefault();active=a.dataset.cat;document.querySelectorAll("#nav a").forEach(x=>x.classList.toggle("active",x===a));backHome();render()});
-document.getElementById("today").textContent=new Date().toLocaleDateString("ar-DZ",{weekday:"long",year:"numeric",month:"long",day:"numeric"});
-document.getElementById("year").textContent=new Date().getFullYear();
-render();
+document.getElementById("nav").addEventListener("click",e=>{const a=e.target.closest("a[data-cat]");if(!a)return;e.preventDefault();active=a.dataset.cat;document.querySelectorAll("#nav a").forEach(x=>x.classList.toggle("active",x===a));backHome();render();});
+document.getElementById("today").textContent=new Date().toLocaleDateString("ar-DZ",{weekday:"long",year:"numeric",month:"long",day:"numeric"});document.getElementById("year").textContent=new Date().getFullYear();
+loadNews();
 </script>
 </body></html>
