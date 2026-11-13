@@ -80,7 +80,8 @@ const seed=[
 {id:3,title:"التراث والثقافة.. ذاكرة المنطقة وهويتها",cat:"الثقافة",summary:"مساحة للتعريف بالموروث الثقافي والعادات والتقاليد والشخصيات المحلية.",body:"تسعى المنصة إلى إبراز الموروث الثقافي والتاريخي للمنطقة، والتعريف بالمبادرات الثقافية والجمعوية التي تحفظ الذاكرة المحلية.",image:"https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=80",date:new Date().toLocaleDateString("ar-DZ")},
 {id:4,title:"الرياضة المحلية.. مواهب تستحق المتابعة",cat:"الرياضة",summary:"تغطية النشاطات الرياضية والفرق والمواهب الشابة في المنطقة.",body:"تخصص بوابة الأبيض سيدي الشيخ مساحة لمتابعة الرياضة المحلية، وتسليط الضوء على الفرق والمواهب الشابة والنتائج والمبادرات الرياضية.",image:"https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=900&q=80",date:new Date().toLocaleDateString("ar-DZ")}
 ];
-let news=JSON.parse(localStorage.getItem("bayadhNews")||"null")||seed;
+.let news=JSON.parse(localStorage.getItem("bayadhNews")||"null");
+if(!Array.isArray(news)||news.length===0) news=seed;
 let active="الكل";
 const save=()=>localStorage.setItem("bayadhNews",JSON.stringify(news));
 const safe=s=>String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
