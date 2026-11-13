@@ -24,7 +24,10 @@ footer{background:#0c2b25;color:#d7e3dc;padding:30px 0}.foot{display:flex;justif
 @media(max-width:800px){.hero{grid-template-columns:1fr}.feature{min-height:300px}.sidefeatures{grid-template-columns:1fr 1fr}.cards{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:540px){.head{gap:10px;padding:14px 0}.logo{width:48px;height:48px;flex-basis:48px}.brand h1{font-size:17px}.brand p{font-size:10px}.admin-btn{font-size:12px;padding:8px}.search{width:100px}.sidefeatures{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.card img{height:195px}.feature{min-height:290px}.feature-content{padding:19px}.feature h2{font-size:23px}.ticker .container{align-items:flex-start}.article-view{padding:16px}.article-view h1{font-size:22px}}
 
-.admin-inline-actions{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0;position:relative;z-index:3}
+.admin-inline-actions{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 12px;position:relative;z-index:20;padding:0 10px}
+.admin-inline-actions button{display:inline-flex;align-items:center;justify-content:center;min-height:36px;box-shadow:0 1px 4px #00000012}
+.card .admin-inline-actions{padding:0 12px 12px}
+.article-view .admin-inline-actions{padding:8px 0}
 .admin-inline-actions button{border:0;border-radius:8px;padding:7px 12px;font-size:13px;cursor:pointer}
 .admin-inline-actions .edit-inline{background:#e8f0ff;color:#174ea6}
 .admin-inline-actions .delete-inline{background:#fde8e7;color:#b3261e}
@@ -52,7 +55,7 @@ const safe=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"
 function status(id,msg,error=false){const e=document.getElementById(id);e.textContent=msg;e.hidden=!msg;e.classList.toggle("error",error);}
 function adminArticleActions(id){return currentUser?`<div class="admin-inline-actions"><button class="edit-inline" onclick="event.stopPropagation();event.preventDefault();openInlineEditor('${safe(id)}')">✏️ تعديل المقال</button><button class="delete-inline" onclick="event.stopPropagation();event.preventDefault();deleteInlineArticle('${safe(id)}')">🗑️ حذف المقال</button></div>`:"";}
 
-function initDb(){if(!window.supabase)throw new Error("تعذر تحميل مكتبة Supabase. تحققي من الإنترنت.");if(SUPABASE_ANON_KEY.includes("PASTE_"))throw new Error("لم تتم إضافة Publishable key إلى الملف.");db=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);}
+function initDb(){if(!window.supabase)throw new Error("تعذر تحميل مكتبة Supabase. تحققي من الإنترنت.");if(SUPABASE_ANON_KEY.includes("PASTE_"))throw new Error("لم تتم إضافة Publishable key إلى الملف.");db=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);db.auth.onAuthStateChange((_event,session)=>{currentUser=session?.user||null;render();if(location.hash.startsWith("#article="))openArticleFromUrl();});}
 function toArticle(r){return{id:r.id,title:r.title||"",cat:r.category||"أخبار المدينة",summary:r.summary||String(r.content||"").slice(0,180),body:r.content||"",image:r.image_url||"",date:r.created_at?new Date(r.created_at).toLocaleDateString("ar-DZ"):""};}
 async function loadNews(admin=false){try{if(!db)initDb();const {data,error}=await db.from(TABLE_NAME).select("id,title,content,category,image_url,is_published,created_at").eq("is_published",true).order("created_at",{ascending:false});if(error)throw error;news=(data||[]).map(toArticle);render();openArticleFromUrl();if(admin)status("adminStatus","تم تحديث الأخبار.");}catch(e){document.getElementById("cards").innerHTML='<div class="empty">تعذر تحميل الأخبار من قاعدة البيانات. تحققي من مفتاح Supabase وصلاحيات قراءة جدول articles.</div>';if(admin)status("adminStatus",e.message||"حدث خطأ أثناء التحميل.",true);console.error(e);}}
 function render(){const q=document.getElementById("search").value.trim().toLowerCase();const list=news.filter(n=>(active==="الكل"||n.cat===active)&&(!q||(n.title+" "+n.summary+" "+n.cat+" "+n.body).toLowerCase().includes(q)));document.getElementById("listTitle").textContent=active==="الكل"?"آخر الأخبار":active;document.getElementById("count").textContent=list.length+" خبر";const hero=document.getElementById("hero");if(active==="الكل"&&!q&&list.length){const f=list[0],rest=list.slice(1,4);hero.innerHTML=`<div class="admin-edit-wrap"><a class="feature" href="#" onclick="showArticle('${safe(f.id)}');return false"><img src="${safe(f.image)}" onerror="this.style.display='none'"><div class="feature-content"><span class="tag">${safe(f.cat)}</span><h2>${safe(f.title)}</h2><div class="meta">${safe(f.date)} • بوابة ولاية الأبيض سيدي الشيخ</div></div></a>${adminArticleActions(f.id)}</div><div class="sidefeatures">${rest.map(n=>`<div class="admin-edit-wrap"><a class="small-feature" href="#" onclick="showArticle('${safe(n.id)}');return false"><img src="${safe(n.image)}" onerror="this.style.display='none'"><div><span class="cat">${safe(n.cat)}</span><h3>${safe(n.title)}</h3><div class="meta">${safe(n.date)}</div></div></a>${adminArticleActions(n.id)}</div>`).join("")}</div>`;}else hero.innerHTML="";document.getElementById("cards").innerHTML=list.slice(active==="الكل"&&!q?4:0).map(card).join("")||'<div class="empty">لا توجد أخبار منشورة في هذا القسم حاليًا.</div>';}
@@ -81,6 +84,7 @@ async function deleteNews(id){if(!confirm("هل تريدين حذف هذا ال�
 document.getElementById("search").addEventListener("input",render);
 document.getElementById("nav").addEventListener("click",e=>{const a=e.target.closest("a[data-cat]");if(!a)return;e.preventDefault();active=a.dataset.cat;document.querySelectorAll("#nav a").forEach(x=>x.classList.toggle("active",x===a));backHome();render();});
 document.getElementById("today").textContent=new Date().toLocaleDateString("ar-DZ",{weekday:"long",year:"numeric",month:"long",day:"numeric"});document.getElementById("year").textContent=new Date().getFullYear();
-loadNews();
+async function boot(){try{initDb();const {data}=await db.auth.getSession();currentUser=data?.session?.user||null;}catch(e){console.error(e);}await loadNews();}
+boot();
 </script>
 </body></html>
